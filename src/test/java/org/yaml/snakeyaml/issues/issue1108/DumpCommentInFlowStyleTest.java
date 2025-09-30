@@ -13,6 +13,11 @@
  */
 package org.yaml.snakeyaml.issues.issue1108;
 
+import static org.junit.Assert.assertEquals;
+
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.util.List;
 import org.junit.Test;
 import org.yaml.snakeyaml.DumperOptions;
 import org.yaml.snakeyaml.LoaderOptions;
@@ -23,12 +28,6 @@ import org.yaml.snakeyaml.nodes.MappingNode;
 import org.yaml.snakeyaml.nodes.Node;
 import org.yaml.snakeyaml.nodes.NodeTuple;
 import org.yaml.snakeyaml.representer.Representer;
-
-import java.io.StringReader;
-import java.io.StringWriter;
-import java.util.List;
-
-import static org.junit.Assert.assertEquals;
 
 public class DumpCommentInFlowStyleTest {
 
@@ -97,9 +96,12 @@ public class DumpCommentInFlowStyleTest {
   public void readAndWriteCommentsInFlowStyleInSequence() {
     Yaml yaml = getYaml();
     String content = "[\n" + "  # red\n" + "  one, # comment\n" + "  # blue\n" + "  two\n" + "]";
+    int counter = 0;
     for (Event event : yaml.parse(new StringReader(content))) {
-      System.out.println(event);
+      // System.out.println(event);
+      counter++;
     }
+    assertEquals(11, counter);
 
     Node node = yaml.compose(new StringReader(content));
     StringWriter output = new StringWriter();
