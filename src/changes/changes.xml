@@ -6,6 +6,9 @@
     </properties>
     <body>
         <release version="2.5" date="in GIT" description="Maintenance">
+            <action dev="asomov" type="add">
+                Add build with JDK 25
+            </action>
             <action dev="asomov" type="fix">
                 Emitting an empty string, as a list element, with block comment, creates invalid YAML (thanks to Anand Beh)
             </action>
