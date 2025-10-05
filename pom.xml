@@ -80,7 +80,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.30</version>
+            <version>1.18.42</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -201,6 +201,12 @@
                               <jdkToolchain>
                                 <version>[11,)</version>
                               </jdkToolchain>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>default-testCompile</id>
+                        <configuration>
+                            <proc>full</proc>
                         </configuration>
                     </execution>
                 </executions>
