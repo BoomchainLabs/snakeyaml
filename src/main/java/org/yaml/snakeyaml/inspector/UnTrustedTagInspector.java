@@ -16,8 +16,8 @@ package org.yaml.snakeyaml.inspector;
 import org.yaml.snakeyaml.nodes.Tag;
 
 /**
- * TagInspector, which does not allow creating any custom instance. It should be used when the
- * data comes from an untrusted source to prevent possible remote code invocation.
+ * TagInspector, which does not allow creating any custom instance. It should be used when the data
+ * comes from an untrusted source to prevent possible remote code invocation.
  */
 public final class UnTrustedTagInspector implements TagInspector {
 
