@@ -10,7 +10,7 @@
                 Add example to migrate to SnakeYAML Engine and provide a custom resolver (thanks to Joacim Breiler)
             </action>
         </release>
-        <release version="2.5" date="in GIT" description="Maintenance">
+        <release version="2.5" date="2025-08-31" description="Maintenance">
             <action dev="asomov" type="add">
                 Add build with JDK 25
             </action>
