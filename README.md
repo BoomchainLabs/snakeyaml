@@ -6,7 +6,7 @@ When you are here because of some vulnerability report please be
 aware that it is most probably a **false positive**.
 
 When you use SnakeYAML 
-[to configure your application](https://bitbucket.org/snakeyaml/snakeyaml/wiki/CVE-2022-1471) 
+[to configure your application](https://codeberg.org/snakeyaml/snakeyaml/wiki/CVE-2022-1471) 
 you are totally safe.
 
 ### When a low quality tooling is complaining ###
@@ -32,13 +32,13 @@ For YAML 1.2 (which is a superset of JSON) you may have a look at [SnakeYAML Eng
 
 
 ## Info ##
- * [Changes](https://bitbucket.org/snakeyaml/snakeyaml/wiki/Changes)
- * [Documentation](https://bitbucket.org/snakeyaml/snakeyaml/wiki/Documentation)
- * [CVE and untrusted data](https://bitbucket.org/snakeyaml/snakeyaml/wiki/CVE%20&%20NIST.md)
+ * [Changes](https://codeberg.org/snakeyaml/snakeyaml/wiki/Changes)
+ * [Documentation](https://codeberg.org/snakeyaml/snakeyaml/wiki)
+ * [CVE and untrusted data](https://codeberg.org/snakeyaml/snakeyaml/wiki/CVE_N_NIST)
 
 ## Contribute ##
-* GIT [is now used](https://bitbucket.org/snakeyaml/snakeyaml/wiki/Migration%20to%20Git) to dance with the [source code](https://bitbucket.org/snakeyaml/snakeyaml/src).
-* If you find a bug in SnakeYAML, please [file a bug report](https://bitbucket.org/snakeyaml/snakeyaml/issues?status=new&status=open&is_spam=!spam).
+* GIT [is now used](https://codeberg.org/snakeyaml/snakeyaml/wiki/Migration%20to%20Git) to dance with the [source code](https://codeberg.org/snakeyaml/snakeyaml/src).
+* If you find a bug in SnakeYAML, please [file a bug report](https://codeberg.org/snakeyaml/snakeyaml/issues?status=new&status=open&is_spam=!spam).
 * You may discuss SnakeYAML at
 [the mailing list](http://groups.google.com/group/snakeyaml-core).
 * [Slack workspace](https://app.slack.com/client/T26CKL7FU/D02URJSL2KS)
