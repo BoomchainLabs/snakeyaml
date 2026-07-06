@@ -6,6 +6,9 @@
     </properties>
     <body>
         <release version="2.7" date="in GIT" description="Maintenance">
+            <action dev="asomov" type="remove" issue="1113">
+                Remove Compact Object Notation
+            </action>
         </release>
         <release version="2.6" date="2026-02-27" description="Maintenance">
             <action dev="asomov" type="update" issue="1110">
