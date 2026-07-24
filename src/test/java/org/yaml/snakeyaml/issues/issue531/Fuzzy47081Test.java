@@ -49,8 +49,11 @@ public class Fuzzy47081Test {
   }
 
   /**
-   * Recursive list fails (with StackOverflowError) because it is used as a key Recursive key should
-   * NOT be used for untrusted data
+   * Recursive list is rejected (as a ConstructorException) because it is used as a key. Recursive
+   * key should NOT be used for untrusted data. Previously this threw an uncaught
+   * StackOverflowError; the circular-dependency check in BaseConstructor now catches
+   * StackOverflowError alongside Exception, so the failure is reported the same way as any other
+   * unacceptable key.
    */
   @Test
   public void parse47081_allow_recursion() {
@@ -67,7 +70,7 @@ public class Fuzzy47081Test {
       // System.out.println(strYaml);
       yaml.load(strYaml);
       fail("Should report invalid YAML: " + strYaml);
-    } catch (StackOverflowError e) {
+    } catch (YAMLException e) {
       assertTrue(true);
     }
   }

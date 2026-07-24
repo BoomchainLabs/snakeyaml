@@ -104,6 +104,13 @@ public class SafeConstructor extends BaseConstructor {
             } else {
               try {
                 key.hashCode();// check circular dependencies
+              } catch (StackOverflowError e) {
+                // the key (in)directly contains itself; do not call key.toString() here as it
+                // would recurse over the same self-referential structure and may overflow the
+                // stack again
+                throw new ConstructorException("while constructing a mapping", node.getStartMark(),
+                    "found recursive key that is not allowed", tuple.getKeyNode().getStartMark(),
+                    e);
               } catch (Exception e) {
                 throw new ConstructorException("while constructing a mapping", node.getStartMark(),
                     "found unacceptable key " + key, tuple.getKeyNode().getStartMark(), e);

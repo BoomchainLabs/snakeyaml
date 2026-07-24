@@ -154,7 +154,8 @@ public class LoaderOptions {
   /**
    * Allow recursive keys for mappings. By default, it is not allowed. This setting only prevents
    * the case when the key is the value. If the key is only a part of the value (the value is a
-   * sequence or a mapping) then this case is not recognized and always allowed.
+   * sequence or a mapping) then this case is not recognized, and it may cause an
+   * ConstructorException; do not rely on this setting for untrusted input.
    *
    * @param allowRecursiveKeys - false to disable recursive keys
    */
