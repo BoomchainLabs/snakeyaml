@@ -7,7 +7,7 @@
     <packaging>bundle</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.scm.id>bitbucket</project.scm.id>
+        <project.scm.id>codeberg</project.scm.id>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <maven.compiler.release>8</maven.compiler.release>
@@ -22,10 +22,10 @@
     <name>SnakeYAML</name>
     <description>YAML 1.1 parser and emitter for Java</description>
     <inceptionYear>2008</inceptionYear>
-    <url>https://bitbucket.org/snakeyaml/snakeyaml</url>
+    <url>https://codeberg.org/snakeyaml/snakeyaml</url>
     <issueManagement>
-        <system>Bitbucket</system>
-        <url>https://bitbucket.org/snakeyaml/snakeyaml/issues</url>
+        <system>codeberg</system>
+        <url>https://codeberg.org/snakeyaml/snakeyaml/issues</url>
     </issueManagement>
     <mailingLists>
         <mailingList>
@@ -34,9 +34,9 @@
         </mailingList>
     </mailingLists>
     <scm>
-        <connection>scm:git:http://bitbucket.org/snakeyaml/snakeyaml</connection>
-        <developerConnection>scm:git:ssh://git@bitbucket.org/snakeyaml/snakeyaml</developerConnection>
-        <url>https://bitbucket.org/snakeyaml/snakeyaml/src</url>
+        <connection>scm:git:http://codeberg.org/snakeyaml/snakeyaml</connection>
+        <developerConnection>scm:git:ssh://git@codeberg.org/snakeyaml/snakeyaml</developerConnection>
+        <url>https://codeberg.org/snakeyaml/snakeyaml/src</url>
         <tag>HEAD</tag>
     </scm>
     <licenses>
@@ -385,9 +385,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-changes-plugin</artifactId>
                 <version>2.12.1</version>
-                <configuration>
-                    <issueLinkTemplate>https://bitbucket.org/snakeyaml/snakeyaml/issues/%ISSUE%</issueLinkTemplate>
-                </configuration>
                 <reportSets>
                     <reportSet>
                         <reports>
