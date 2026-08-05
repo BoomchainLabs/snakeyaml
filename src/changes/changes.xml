@@ -6,6 +6,13 @@
     </properties>
     <body>
         <release version="2.7" date="in GIT" description="Maintenance">
+            <action dev="asomov" type="update" issue="1117">
+                Improve code for issue 1117: setAllowRecursiveKeys() is not reliable for untrusted input (thanks to Mirko Swillus)
+            </action>
+            <action dev="asomov" type="remove" issue="1115">
+                Vulnerabity: SnakeYAML 2.x's CompactConstructor and PackageCompactConstructor extensions
+                completely bypass the TagInspector security control (thanks to )
+            </action>
             <action dev="asomov" type="remove" issue="1113">
                 Remove Compact Object Notation
             </action>
