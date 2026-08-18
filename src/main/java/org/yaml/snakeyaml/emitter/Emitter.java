@@ -33,6 +33,7 @@ import org.yaml.snakeyaml.DumperOptions.Version;
 import org.yaml.snakeyaml.comments.CommentEventsCollector;
 import org.yaml.snakeyaml.comments.CommentLine;
 import org.yaml.snakeyaml.comments.CommentType;
+import org.yaml.snakeyaml.error.Mark;
 import org.yaml.snakeyaml.error.YAMLException;
 import org.yaml.snakeyaml.events.AliasEvent;
 import org.yaml.snakeyaml.events.CollectionEndEvent;
@@ -718,7 +719,12 @@ public final class Emitter implements Emitable {
         indent = indents.pop();
         state = states.pop();
       } else if (event instanceof CommentEvent) {
+        Mark mark = ((CommentEvent) event).getStartMark();
+        boolean standalone = mark != null && mark.getColumn() <= indent;
         blockCommentsCollector.collectEvents(event);
+        if (standalone) {
+          writeBlockComment();
+        }
       } else {
         writeIndent();
         if (!indentWithIndicator || this.first) {
