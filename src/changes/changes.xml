@@ -5,7 +5,7 @@
         <title>YAML 1.1 parser and emitter</title>
     </properties>
     <body>
-        <release version="2.7" date="in GIT" description="Maintenance">
+        <release version="2.7" date="2026-08-30" description="Maintenance">
             <action dev="asomov" type="fix" issue="1116">
                 Comments located in list become list entries after serialize (thanks to yablonsky-anton)
             </action>
@@ -14,7 +14,7 @@
             </action>
             <action dev="asomov" type="remove" issue="1115">
                 Vulnerabity: SnakeYAML 2.x's CompactConstructor and PackageCompactConstructor extensions
-                completely bypass the TagInspector security control (thanks to )
+                completely bypass the TagInspector security control
             </action>
             <action dev="asomov" type="remove" issue="1113">
                 Remove Compact Object Notation
