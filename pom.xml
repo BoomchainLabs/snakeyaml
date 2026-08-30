@@ -34,7 +34,7 @@
         </mailingList>
     </mailingLists>
     <scm>
-        <connection>scm:git:http://codeberg.org/snakeyaml/snakeyaml</connection>
+        <connection>scm:git:https://codeberg.org/snakeyaml/snakeyaml</connection>
         <developerConnection>scm:git:ssh://git@codeberg.org/snakeyaml/snakeyaml</developerConnection>
         <url>https://codeberg.org/snakeyaml/snakeyaml/src</url>
         <tag>HEAD</tag>
